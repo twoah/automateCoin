@@ -5,6 +5,15 @@ def get_balance(ticker):
     balance  = upbit.get_balance(ticker)
     return balance
 
+def get_buy_average(ticker) : 
+    balances = upbit.get_balance(ticker)
+    for b in balances : 
+        if b['currency'] == ticker:
+            if b['avg_buy_price'] is not None:
+                return float(b['avg_buy_price'])
+            else: 
+                return 0
+                
 def buy_limit_order(ticker, price, amount): 
     order = upbit.buy_limit_order(ticker, price, amount)
     print(ticker , " 지정가 매수 : " , order)
