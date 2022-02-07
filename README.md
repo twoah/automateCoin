@@ -3,7 +3,7 @@ alg.py
 - SMA(이동평균전략), Volatility(변동성 돌파 전략) 구현 
 
 common.py 
-- 공통 함수 
+- 공통 함수(init 등) 
 
 order.py
 - 매수, 매도 등 함수 
